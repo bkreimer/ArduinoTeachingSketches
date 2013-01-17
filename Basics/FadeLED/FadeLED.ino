@@ -13,8 +13,8 @@ software blinks the pin on/off very fast - the interval of the blinking appears 
 eye to be variable, just like a flipbook appears like continuous movement!
 
 CHALLENGE:
++ Can you make this action only occur when a button is pressed?
 + Can you count button presses, making the LED brighter each time and resetting when you hit 255?
-+ 
 
 */
 
