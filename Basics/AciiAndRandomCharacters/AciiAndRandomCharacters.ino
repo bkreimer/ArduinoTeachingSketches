@@ -19,6 +19,10 @@ Since ASCII values are really just numbers, we can get a random number using the
 
 CHALLENGE:
 + Expand the system to also create random spaces and line-breaks
++ Apply rules to the system: a space after each period, a space before
+  a capital letter
++ Look for certain combinations of letters forming words - do something
+  when they appear at random
 
 */
 
