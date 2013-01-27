@@ -1,5 +1,5 @@
 /*
-READING ANALOG VALUES
+ANALOG SENSOR BASICS
 Jeff Thompson | 2013 | www.jeffreythompson.org
 
 Unlike a digital sensor which only has two possible states (on
