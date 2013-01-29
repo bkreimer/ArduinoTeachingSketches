@@ -3,8 +3,8 @@ Arduino Teaching Sketches
 
 Examples for teaching Physical Computing to artists and designers - examples will be added throughout the Spring 2013 semester as students progress through various topics.
 
-An editable parts list (with vendors, part numbers, and prices) can be found at:
-  https://docs.google.com/spreadsheet/ccc?key=0ApWbqo450AfRdDFlVGlEMzllSE43c2VNRXpaYnR6cXc
+An editable parts list (with vendors, part numbers, and prices) can be found at:  
+https://docs.google.com/spreadsheet/ccc?key=0ApWbqo450AfRdDFlVGlEMzllSE43c2VNRXpaYnR6cXc
 
 Each section also includes PNG and [Fritzing](http://www.fritzing.org) files showing the breadboard layouts.
 
