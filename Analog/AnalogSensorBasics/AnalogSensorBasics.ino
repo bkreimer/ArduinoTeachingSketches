@@ -47,7 +47,7 @@ Based on the 'AnalogInput' sketch from the Arduino examples.
 */
 
 int sensorPin = A0;    // variable for analog pin (specified as A0-A5)
-int sensorVal = 0;     // variable to read sensor value
+int sensorValue = 0;     // variable to read sensor value
 int ledPin = 13;       // change LED blink rate based on sensor input!
 
 void setup() {
