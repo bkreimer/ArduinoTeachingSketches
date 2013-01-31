@@ -33,21 +33,40 @@ CHALLENGE:
 
 int sensorPin = A0;      // read sensor on analog pin 0
 int sensorValue = 0;     // variable to read sensor
-int ledPin = 13;         // LED for output
+int ledPin = 11;         // LED for output
 
 void setup() {
   pinMode(ledPin, OUTPUT);    // LED to output!
+  Serial.begin(9600);         // display values over USB
 }
 
 void loop() {
   
-  // read sensor as usual (returns a value from 0-1025
+  // read sensor as usual (returns a value from 0-1023)
   sensorValue = analogRead(sensorPin);
-  
-  // use 'map' to convert from range 0-1024 to range 0-255
+  Serial.println(sensorValue);
+    
+  // use 'map' to convert from range 0-1023 to range 0-255
   // arguments are variable, input low,high, output low,high
-  sensorValue = map(sensorValue, 0,1024, 0,255);
+  sensorValue = map(sensorValue, 0,1023, 0,255);
   
+  // NOTE: you can also 'tune' your map's values to the 'real' readings
+  // from your sensor - for example, if your sensor actually reads
+  // 400 for the low and 800 for the high, change your function to:
+  // sensorValue = map(sensorValue, 400,800, 0,255);
+  
+  // then, make sure that our values NEVER go above 255 or below 0
+  sensorValue = constrain(sensorValue, 0, 255);
+    
   // use PWM to output sensor reading to LED!
-  analogWrite(ledPin, sensorValue);  
+  analogWrite(ledPin, sensorValue);
+  
+  // make sure we don't overload the serial connection
+  delay(1);
 }
+
+
+
+
+
+
