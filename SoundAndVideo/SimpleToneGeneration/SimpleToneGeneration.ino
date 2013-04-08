@@ -1,5 +1,5 @@
 /*
-SIMPLE TONE GENERATION WITH PWM
+SIMPLE TONE GENERATION
 Jeff Thompson | 2013 | www.jeffreythompson.org
 
 Create a tone sweep from high to low using digitalWrite and

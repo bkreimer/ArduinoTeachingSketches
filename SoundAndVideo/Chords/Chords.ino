@@ -18,7 +18,8 @@ CHORDS
  CHALLENGE:
  + Try attaching buttons to different Tone objects - see if you can
    make a keyboard that plays the note until the button is released.
- 
+ + Can you invent a better data structure for melodies that includes
+   pitches and durations? Hint: arrays or objects?
  */
 
 Tone t1, t2, t3;  // create Tone objects - one for each simultaneous pitch
