@@ -1,6 +1,5 @@
 #include <TVout.h>
 #include <fontALL.h>
-//#include <video_gen.h>
 
 /*
 VIDEO OUTPUT
@@ -23,7 +22,8 @@ VIDEO OUTPUT
  
  CHALLENGE:
  + Can you control the creation or size of shapes using different
-   sensors? This is just a short step from Pong!
+   sensors? This is just a short step from Pong! (see the TVout Google
+   Code page for Arduino-Tetris)
  + Look at the 'DemoNTSC' sketch in the TVout examples; in it graphics
    are defined as arrays. Can you write a sketch (using Processing,
    Python, Javascript, etc) that generates those arrays from an existing
@@ -37,7 +37,20 @@ TVout tv;               // TVout object
 
 void setup() {
   tv.begin(_NTSC, width, height);    // start TV connection
-  tv.select_font(font8x8);
+  tv.select_font(font8x8);           // create font for display
+  
+  // fill with random pixels
+  for (int y=0; y<height; y++) {
+    for (int x=0; x<width; x++) {
+      if (random(10) > 5) {
+        tv.set_pixel(x,y, WHITE);
+      }
+      else {
+        tv.set_pixel(x,y, BLACK);
+      }
+    }
+  }
+  tv.delay(2000);
 }
 
 void loop() {
