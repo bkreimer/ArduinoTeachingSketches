@@ -36,7 +36,7 @@ void loop() {
   if (millis() % 250 == 0) {
     t1.play(NOTE_C4, 150);    // the optional second argument is duration in ms
     t2.play(NOTE_E5, 150);    // if not included, use t1.stop() to end the note
-    t2.play(NOTE_G5, 150);
+    t3.play(NOTE_G5, 150);
   }
 }
 

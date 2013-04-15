@@ -1,5 +1,6 @@
 #include <TVout.h>
-#include <video_gen.h>
+#include <fontALL.h>
+//#include <video_gen.h>
 
 /*
 VIDEO OUTPUT
@@ -36,13 +37,16 @@ TVout tv;               // TVout object
 
 void setup() {
   tv.begin(_NTSC, width, height);    // start TV connection
+  tv.select_font(font8x8);
 }
 
 void loop() {
 
   // clear screen and draw shapes
   tv.clear_screen();
-  tv.draw_rect(width/2,height/2, rectSize,rectSize);
+  tv.draw_rect(width/2-rectSize/2,height/2-rectSize/2, rectSize,rectSize, WHITE);
+  tv.println(width/2-(5*8),height/2-8, "TELEVISION");    // offset 1/2 # of characters x 8px wide
+  tv.println(width/2-8,height/2+8, ":(");                // emoticons for simple graphics (parentheses seem reversed in the TVout lib...)
 
   // update rectangle size; when too large, reset
   rectSize += 1;
@@ -50,7 +54,7 @@ void loop() {
     rectSize = 10;
   }
 
-  // wait before redrawing - this helps prevent your Arduino from freaking out
-  tv.delay(30);
+  // OPTIONAL: wait before redrawing (may be helpful preventing your Arduino from freaking out)
+  // try times that are even multiples of the 60Hz NTSC refresh rate
+  tv.delay(60);
 }
-
